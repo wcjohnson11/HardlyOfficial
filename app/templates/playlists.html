@@ -1,0 +1,15 @@
+<ion-view title="Playlists">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-90 center bindIt">
+      <ion-scroll direction="y" class="schedule">
+      <ion-item class="item-icon-right" ng-repeat="playlist in playlists">
+        <h3>{{playlist.name}}</h3>
+        <p>{{playlist.timeStart}} - {{playlist.timeEnd}} <span class="stage">{{playlist.stage}}</span></p>
+      </ion-item>
+      </ion-scroll>
+      </div>
+      <div class="col"></div>
+    </div>
+  </ion-content>
+</ion-view>
