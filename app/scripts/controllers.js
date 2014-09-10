@@ -63,7 +63,7 @@ angular.module('HardStrict.controllers', [])
     });
     $timeout(function() {
        myPopup.close(); //close the popup after 9 seconds for some reason
-    }, 9999000);
+    }, 9000);
    };
 
 
