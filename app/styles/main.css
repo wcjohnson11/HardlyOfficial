@@ -19,6 +19,30 @@ body {
   position: absolute;
 }
 
+
+/*CSS for iPhone 3 & 4*/
+@media screen and (min-device-height: 400px) {
+  .bindIt {
+    padding-top: 20.5%;
+  }
+
+  .schedule {
+    height: 333px;
+  }
+}
+
+/*CSS for iPhone 5*/
+@media screen and (min-device-height: 500px) {
+	.bindIt {
+	  padding-top: 28.5%;
+	}
+
+	.schedule {
+	  height: 393px;
+	}
+}
+
+
 .item-icon-right {
   background-color: transparent;
   width: 100%
@@ -41,16 +65,6 @@ body {
 
 p {
  display: inline-block;
-}
-
-.bindIt {
-  padding-top: 28.5%;
-  padding-bottom: 11%;
-/*  overflow: hidden;*/
-}
-
-.schedule {
-  height: 393px;
 }
 
 .divider {
