@@ -17,10 +17,13 @@
             <ion-item class="item-icon-right" collection-repeat="playlist in playlists"
             collection-item-width="'100%'"
             collection-item-height="74">
-              <h3>{{playlist.name}}</h3>
+              <h2>{{playlist.name}}</h2>
               <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
+              <p><span class="day">{{playlist.day}}</span></p>
               <p><span class="stage">{{playlist.stage}}</span></p>
-              <img ng-src="./../images/divider.png"/>
+              <div class="divider">
+                <img style="width: 100%"ng-src="./../images/divider.png"/>
+              </div>
             </ion-item>
           </ion-scroll>
         </div>

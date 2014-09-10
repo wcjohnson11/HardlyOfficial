@@ -1,7 +1,7 @@
 'use strict';
 angular.module('HardStrict.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicScrollDelegate, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicScrollDelegate, $ionicModal, $timeout, $state) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -39,6 +39,10 @@ angular.module('HardStrict.controllers', [])
   // Open the login modal
   $scope.faq = function() {
     $scope.modal2.show();
+  },
+
+  $scope.startApp = function() {
+    $state.go('app.playlists');
   };
 
 
