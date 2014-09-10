@@ -1,13 +1,10 @@
 <div class="modal">
 
-  <!--   <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div> -->
-  <ion-content>
-    <div class="modal image-modal transparent">
-      <ion-pane class="transparent">
-        <img ng-src="./../images/MAP.jpg" class="fullscreen-image"/>
-      </ion-pane>
+  <div class="handClose">
+    <img ng-src="./../images/HAND.png" ng-click="closeLogin()"/>
+  </div>
+  <ion-scroll zooming="true" direction="xy" style="width: 320px; height: 568px">
+    <div style="width: 3592px; height: 2112px; background: url('./../images/MAP.jpg') no-repeat">
     </div>
-  </ion-content>
+  </ion-scroll>
 </div>
