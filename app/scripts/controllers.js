@@ -1,7 +1,7 @@
 'use strict';
 angular.module('HardStrict.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicScrollDelegate, $ionicModal, $timeout, $state) {
+.controller('AppCtrl', function($scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, $ionicPopup) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -44,6 +44,42 @@ angular.module('HardStrict.controllers', [])
   $scope.startApp = function() {
     $state.go('app.playlists');
   };
+
+  $scope.sortShow = function() {
+    $scope.go('app.playlists');
+  };
+
+  $scope.showPopup = function() {
+    $scope.data = {}
+
+    // An elaborate, custom popup
+    var myPopup = $ionicPopup.show({
+      templateUrl: './../templates/sort.html',
+      title: 'Choose how to sort',
+      scope: $scope,
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: '<b>Save</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+            if (!$scope.data.wifi) {
+              //don't allow the user to close unless he enters wifi password
+              e.preventDefault();
+            } else {
+              return $scope.data.wifi;
+            }
+          }
+        },
+      ]
+    });
+    myPopup.then(function(res) {
+      console.log('Tapped!', res);
+    });
+    $timeout(function() {
+       myPopup.close(); //close the popup after 9 seconds for some reason
+    }, 9000);
+   };
 
 
 })

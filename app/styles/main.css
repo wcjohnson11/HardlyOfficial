@@ -82,3 +82,31 @@ p {
   position: absolute;
   z-index: 999999;
 }
+
+
+.sorted {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.popup {
+  position: absolute;
+  width: 92px;
+  height: 306px;
+  top: 175px;
+  right: 23px;
+}
+
+.sort-button-az {
+  margin-top: 75px;
+}
+
+.sort-button-stage {
+  margin-top: 30px;
+}
+
+.sort-button-fav {
+  margin-top: 23px;
+}
+
