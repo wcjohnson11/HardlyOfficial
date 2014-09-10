@@ -1,25 +1,33 @@
 <ion-view title="Playlists">
     <div class="row">
       <div class="col">
-        <button class="button button-outline button-map" ng-click="login()"></button>
+        <button class="button button-clear button-map" ng-click="login()"></button>
       </div>
       <div class="col">
-        <button class="button button-outline button-faq" ng-click="faq()"></button>
+        <button class="button button-clear button-faq" ng-click="faq()"></button>
       </div>
       <div class="col">
-        <button class="button button-outline button-sort" ng-click="showPopup()"></button>
+        <button class="button button-clear button-sort" ng-click="showPopup()"></button>
       </div>
     </div>
     <div class="row">
       <div class="col"></div>
         <div class="col col-90 center bindIt">
           <ion-scroll direction="y" class="schedule">
-            <ion-item class="item-icon-right" collection-repeat="playlist in showsStage"
+            <ion-item class="item-icon-right item-text-wrap" collection-repeat="playlist in showsStage"
             collection-item-width="'100%'"
             collection-item-height="74">
+              <div class="row">
+                <div class="col ">
+                  <img ng-if="!playlist.favorite" ng-src="./../images/STAR.png">
+                  <img ng-if="playlist.favorite" ng-src="./../images/STARFULL.png">
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
               <h2 class="artist-name">{{playlist.name}}</h2>
-              <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
               <p><span class="day">{{playlist.day}}</span></p>
+              <p><span class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</span></p>
               <p><span class="stage">{{playlist.stage}}</span></p>
               <div class="divider">
                 <img style="width: 100%"ng-src="./../images/divider.png"/>
