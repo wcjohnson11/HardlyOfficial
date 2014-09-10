@@ -57,28 +57,13 @@ angular.module('HardStrict.controllers', [])
       templateUrl: './../templates/sort.html',
       title: 'Choose how to sort',
       scope: $scope,
-      buttons: [
-        { text: 'Cancel' },
-        {
-          text: '<b>Save</b>',
-          type: 'button-positive',
-          onTap: function(e) {
-            if (!$scope.data.wifi) {
-              //don't allow the user to close unless he enters wifi password
-              e.preventDefault();
-            } else {
-              return $scope.data.wifi;
-            }
-          }
-        },
-      ]
     });
     myPopup.then(function(res) {
       console.log('Tapped!', res);
     });
     $timeout(function() {
        myPopup.close(); //close the popup after 9 seconds for some reason
-    }, 9000);
+    }, 9999000);
    };
 
 

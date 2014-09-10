@@ -98,6 +98,13 @@ p {
   right: 23px;
 }
 
+.popup .row {
+  padding: 0px;
+}
+.popup .col {
+  padding: 0px;
+}
+
 .sort-button-az {
   margin-top: 75px;
 }
