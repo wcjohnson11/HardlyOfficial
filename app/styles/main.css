@@ -1,4 +1,17 @@
 /* Your application styles go here */
+
+@font-face {
+  font-family: 'CheltBolCon';
+  font-style: normal;
+  font-weight: 400;
+  src: local('CheltBolCon'), local('CheltBolCon'), url(./../fonts/CheltBolCon);
+}
+
+html,
+body {
+  font-family: 'CheltBolCon';
+}
+
 .pane {
   background: url(./../images/BG.jpg) no-repeat center center fixed;
   background-size: 100% 100%;
