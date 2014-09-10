@@ -2,7 +2,7 @@
 .pane {
   background: url(./../images/BG.jpg) no-repeat center center fixed;
   background-size: 100% 100%;
-  overflow: hidden;
+/*  overflow: hidden;*/
   position: absolute;
 }
 
@@ -17,7 +17,7 @@
 .bindIt {
   padding-top: 46.5%;
   padding-bottom: 10%;
-  overflow: hidden;
+/*  overflow: hidden;*/
 }
 
 .schedule {

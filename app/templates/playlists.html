@@ -2,8 +2,21 @@
     <div class="row">
       <div class="col"></div>
       <div class="col col-90 center bindIt">
+<!--         <div class="list">
+          <a class="item my-item"
+          collection-repeat="item in playlists"
+          collection-item-height="100"
+          collection-item-width="'100%'"
+          ng-style="{'line-height': 100px}"
+          ng-class="{'item-divider': 40px}">
+          <img ng-if="item-divider" ng-src="./../images/divider.png">
+          {{item.name}}          
+          </a>
+        </div> -->
       <ion-scroll direction="y" class="schedule">
-      <ion-item class="item-icon-right" collection-repeat="playlist in playlists" collection-item-width="'100%'" collection-item-height="'18%'">
+      <ion-item class="item-icon-right" collection-repeat="playlist in playlists"
+      collection-item-width="'100%'"
+      collection-item-height="74">
         <h3>{{playlist.name}}</h3>
         <p>{{playlist.timeStart}} - {{playlist.timeEnd}} <span class="stage">{{playlist.stage}}</span></p>
       </ion-item>
