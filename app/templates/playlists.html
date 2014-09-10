@@ -1,13 +1,13 @@
 <ion-view title="Playlists">
     <div class="row">
       <div class="col">
-      <button class="button button-outline">MAP</    button>
+      <button class="button button-outline button-map" ng-click="login()"></button>
       </div>
       <div class="col">
-      <button class="button button-outline">FAQ</    button>
+      <button class="button button-outline button-faq"></button>
       </div>
       <div class="col">
-      <button class="button button-outline">SORTBY</    button>
+      <button class="button button-outline button-sort"></button>
       </div>
     </div>
     <div class="row">
@@ -29,7 +29,8 @@
       collection-item-width="'100%'"
       collection-item-height="74">
         <h3>{{playlist.name}}</h3>
-        <p>{{playlist.timeStart}} - {{playlist.timeEnd}} <span class="stage">{{playlist.stage}}</span></p>
+        <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
+        <p><span class="stage">{{playlist.stage}}</span></p>
       </ion-item>
       </ion-scroll>
       </div>

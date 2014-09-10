@@ -8,10 +8,21 @@
 
 .item-icon-right {
   background-color: transparent;
+  width: 100%
+}
+
+
+.times {
+  float: left;
 }
 
 .stage {
   float: right;
+  margin-left: 50px;
+}
+
+p {
+ display: inline-block;
 }
 
 .bindIt {
@@ -21,5 +32,30 @@
 }
 
 .schedule {
-  height: 395px;
+  height: 393px;
+}
+
+.modal {
+	background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#000000 100%,#131313 100%);
+}
+
+.transparent {
+  background: transparent !important;
+}
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
