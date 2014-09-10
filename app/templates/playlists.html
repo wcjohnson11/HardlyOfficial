@@ -14,10 +14,10 @@
       <div class="col"></div>
         <div class="col col-90 center bindIt">
           <ion-scroll direction="y" class="schedule">
-            <ion-item class="item-icon-right" collection-repeat="playlist in playlists"
+            <ion-item class="item-icon-right" collection-repeat="playlist in showsStage"
             collection-item-width="'100%'"
             collection-item-height="74">
-              <h2>{{playlist.name}}</h2>
+              <h2 class="artist-name">{{playlist.name}}</h2>
               <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
               <p><span class="day">{{playlist.day}}</span></p>
               <p><span class="stage">{{playlist.stage}}</span></p>

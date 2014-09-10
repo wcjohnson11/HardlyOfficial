@@ -57,10 +57,13 @@ body {
 
 }
 
+.artist-name {
+	width: 100%;
+}
+
 .stage {
   float: right;
   margin-left: 50px;
-  transform:rotate(90deg);
 }
 
 p {
