@@ -17,7 +17,7 @@ angular.module('HardStrict', ['ionic', 'config', 'HardStrict.controllers'])
     }
     if(window.StatusBar) {
       // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
+      StatusBar.hide();
     }
   });
 })

@@ -1,39 +1,29 @@
 <ion-view title="Playlists">
     <div class="row">
       <div class="col">
-      <button class="button button-outline button-map" ng-click="login()"></button>
+        <button class="button button-outline button-map" ng-click="login()"></button>
       </div>
       <div class="col">
-      <button class="button button-outline button-faq" ng-click="faq()"></button>
+        <button class="button button-outline button-faq" ng-click="faq()"></button>
       </div>
       <div class="col">
-      <button class="button button-outline button-sort"></button>
+        <button class="button button-outline button-sort"></button>
       </div>
     </div>
     <div class="row">
       <div class="col"></div>
-      <div class="col col-90 center bindIt">
-<!--         <div class="list">
-          <a class="item my-item"
-          collection-repeat="item in playlists"
-          collection-item-height="100"
-          collection-item-width="'100%'"
-          ng-style="{'line-height': 100px}"
-          ng-class="{'item-divider': 40px}">
-          <img ng-if="item-divider" ng-src="./../images/divider.png">
-          {{item.name}}          
-          </a>
-        </div> -->
-      <ion-scroll direction="y" class="schedule">
-      <ion-item class="item-icon-right" collection-repeat="playlist in playlists"
-      collection-item-width="'100%'"
-      collection-item-height="74">
-        <h3>{{playlist.name}}</h3>
-        <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
-        <p><span class="stage">{{playlist.stage}}</span></p>
-      </ion-item>
-      </ion-scroll>
-      </div>
+        <div class="col col-90 center bindIt">
+          <ion-scroll direction="y" class="schedule">
+            <ion-item class="item-icon-right" collection-repeat="playlist in playlists"
+            collection-item-width="'100%'"
+            collection-item-height="74">
+              <h3>{{playlist.name}}</h3>
+              <p class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</p>
+              <p><span class="stage">{{playlist.stage}}</span></p>
+              <img ng-src="./../images/divider.png"/>
+            </ion-item>
+          </ion-scroll>
+        </div>
       <div class="col"></div>
     </div>
   </ion-content>
