@@ -19,8 +19,8 @@
             collection-item-height="getItemHeight(playlist) + px">
               <div class="row">
                 <div class="col col-20" ng-click="toggleFave(playlist)">
-                  <img class="imgFave" ng-if="!playlist.favorite" ng-src="./../images/STAR.png">
-                  <img class="imgFave" ng-if="playlist.favorite" ng-src="./../images/STARFULL.png">
+                  <img class="imgFave" ng-if="!playlist.favorite" ng-src="./../images/STAR.png"/>
+                  <span class="helper"><img class="imgFave" ng-if="playlist.favorite" ng-src="./../images/STARFULL.png"/>
                 </div>
                 <div class="col col-70">
                   <h2 class="artist-name">{{playlist.name}}</h2>

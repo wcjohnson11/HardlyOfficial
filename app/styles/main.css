@@ -154,7 +154,19 @@ p,
   color: black;
 }
 .times {
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   color: #3B3A31;
-  font-style: italic;
+  /*font-style: italic;*/
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.imgFave {
+	vertical-align: middle;
+	max-height: ;
+
 }
