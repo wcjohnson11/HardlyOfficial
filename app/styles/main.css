@@ -142,6 +142,7 @@ p,
 
 .sort-button-stage {
   margin-top: 30px;
+  z-index: 99999;
 }
 
 .sort-button-fav {
