@@ -429,7 +429,7 @@ angular.module('HardStrict.controllers', [])
       if (favSorted.length) {
         sortedList = favSorted;
       } else {
-        sortedList = [{name: 'Star some artists to make your own custom lineup! \n It\'s the easiest way to stay on top of all this great music!', stage:'Hardly Strictly Advice'}];
+        sortedList = [{name: 'Star some artists to make your own custom lineup! \n It\'s the easiest way to stay on top of all this great music!', stage:'The Hardly Strictly Family'}];
       }
     };
     makeSortedList();
