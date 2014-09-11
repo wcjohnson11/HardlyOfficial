@@ -154,30 +154,41 @@ button {
   padding: 0px;
 }
 
+.headly {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-right: 70px;
+  color: black;
+  font-weight: 900;
+  text-shadow: 3px 3px moccassin;
+  font-size:29px;
+  text-align: center;
+}
+
 .sort-button-az {
-  margin-top: 119px;
+  margin-top: 10px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
 }
 
 .sort-button-stage {
-  margin-top: 72px;
+  margin-top: 30px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
 }
 
 .sort-button-fav {
-  margin-top: 79px;
+  margin-top: 30px;
   width: 200px;
   height: 130px;
 }
 
 .button-clear.button-clear {
   color: #3B3A31;
-  font-weight: 600;
-  text-shadow: 1px 1px moccassin;
+  font-weight: 900;
+  text-shadow: 3px 3px moccassin;
   font-size:20px;
 }
 
