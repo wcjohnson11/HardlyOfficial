@@ -83,7 +83,7 @@ button {
 }
 
 .pleaseWork {
-  background: url(./../images/Splash.jpg);
+  background: url(./../images/Splash.jpg)no-repeat left top fixed;
   padding-right: 45px;
 }
 
@@ -174,7 +174,7 @@ button {
 }
 
 .sort-button-stage {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
@@ -182,7 +182,7 @@ button {
 }
 
 .sort-button-fav {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
