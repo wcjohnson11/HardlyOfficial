@@ -436,7 +436,7 @@ angular.module('HardStrict.controllers', [])
   });
 
   $scope.$on('sortFav', function(event, args) {
-    $scope.sortFave();
+    $scope.sortFav();
   });
 
 

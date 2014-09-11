@@ -9,11 +9,11 @@
 
   <ion-side-menu side="right">
     <ion-pane class="pleaseWork" scroll="false">
-      <img class="sorted" ng-src="images/sort.png"/>
+      <!-- <img class="sorted" ng-src="images/sort.png"/> -->
         <div class="col">
-          <button href="#/home" class="button button-clear sort-button-az" ng-click="triggerSortAZ()"></button>
-          <button href="#/home" class="button button-clear sort-button-stage" ng-click="triggerSortStage()"></button>
-          <button href="#/home" class="button button-clear sort-button-fav" ng-click="triggerSortFav()"></button>
+          <button href="#/home" class="button button-clear sort-button-az" ng-click="triggerSortAZ()">BY NAME</button>
+          <button href="#/home" class="button button-clear sort-button-stage" ng-click="triggerSortStage()">BY STAGE</button>
+          <button href="#/home" class="button button-clear sort-button-fav" ng-click="triggerSortFav()" ng-src="images/Star.png">FAVORITES</button>
         </div>
     </ion-pane>
   </ion-side-menu>
