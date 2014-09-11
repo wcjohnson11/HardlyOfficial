@@ -423,10 +423,20 @@ angular.module('HardStrict.controllers', [])
       }
     });
     favSorted = sorted.concat(sorted2);
-
-    $scope.showsStage = favSorted;
+    var sortedList;
+    var makeSortedList;
+    makeSortedList = function () {
+      if (favSorted.length) {
+        sortedList = favSorted;
+      } else {
+        sortedList = [{name: 'Star some artists to make your own custom lineup! \n It\'s the easiest way to stay on top of all this great music!', stage:'Hardly Strictly Advice'}];
+      }
+    };
+    makeSortedList();
+    $scope.showsStage = sortedList;
     $ionicScrollDelegate.scrollTop(true);
   };
+
   $scope.$on('sortAZ', function(event, args) {
     $scope.sortName();
   });

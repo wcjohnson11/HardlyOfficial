@@ -155,9 +155,9 @@ button {
 }
 
 .headly {
-  margin-top: 50px;
-  padding-top: 50px;
-  padding-right: 70px;
+  margin-top: 30px;
+  padding-top: 30px;
+  /*padding-right: 70px;*/
   color: black;
   font-weight: 900;
   text-shadow: 3px 3px moccassin;
@@ -170,6 +170,7 @@ button {
   width: 200px;
   height: 130px;
   padding-left: 20px;
+  text-align: center;
 }
 
 .sort-button-stage {
@@ -177,12 +178,14 @@ button {
   width: 200px;
   height: 130px;
   padding-left: 20px;
+  text-align: center;
 }
 
 .sort-button-fav {
   margin-top: 30px;
   width: 200px;
   height: 130px;
+  padding-left: 20px;
 }
 
 .button-clear.button-clear {
