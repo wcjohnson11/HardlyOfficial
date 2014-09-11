@@ -69,7 +69,7 @@ angular.module('HardStrict.controllers', [])
 .controller('PlaylistsCtrl', function($scope) {
   
   $scope.showsStage = [
-    {favorite: false, name: 'Peter Rowans Twang an Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
+    {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
     {favorite: false, name: 'The Waybacks', timeStart: '1:15pm', timeEnd: '2:05pm', day: 'FRI', stage: 'BANJO'},
     {favorite: false, name: 'John Prine', timeStart: '2:40pm', timeEnd: '3:40pm', day: 'FRI', stage: 'BANJO'},
     {favorite: false, name: 'Dry Branch Fire Squad', timeStart: '4:15pm', timeEnd: '5:15pm', day: 'FRI', stage: 'BANJO'},
@@ -85,7 +85,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Sharon Van Etten', timeStart: '3:20pm', timeEnd: '4:00pm', day: 'FRI', stage: 'ROOSTER'},
     {favorite: false, name: 'Dawes', timeStart: '4:30pm', timeEnd: '5:15pm', day: 'FRI', stage: 'ROOSTER'},
     {favorite: false, name: 'Conor Oberst', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'FRI', stage: 'ROOSTER'},
-    {favorite: false, name: 'Bill Kurchen & Too Much Fun', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'ARROW'},
+    {favorite: false, name: 'Bill Kirchen & Too Much Fun', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'ARROW'},
     {favorite: false, name: 'Buckwheat Zydeco', timeStart: '1:15pm', timeEnd: '2:05pm', day: 'FRI', stage: 'ARROW'},
     {favorite: false, name: 'Hurray For The Riff Raff', timeStart: '2:35pm', timeEnd: '3:45pm', day: 'FRI', stage: 'ARROW'},
     {favorite: false, name: 'Cibo Matto', timeStart: '4:15pm', timeEnd: '5:15pm', day: 'FRI', stage: 'ARROW'},
@@ -93,7 +93,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'The McCrary Sisters', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Alison Brown Quintet', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'The Time Jumpers', timeStart: '1:25pm', timeEnd: '2:15pm', day: 'SAT', stage: 'BANJO'},
-    {favorite: false, name: 'Holler Down The Hollow: A Salute to the Masters', timeStart: '2:45pm', timeEnd: '3:55pm', day: 'SAT', stage: 'BANJO'},
+    {favorite: false, name: 'Holler Down The Hollow: A Hardly Strictly Salute to the Masters', timeStart: '2:45pm', timeEnd: '3:55pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Dave Rawlings Machine', timeStart: '4:25pm', timeEnd: '5:15pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Steve Earle & The Dukes', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Horseshoe Hill', timeStart: '11:40am', timeEnd: '12:05pm', day: 'SAT', stage: 'BANDWAGON'},
@@ -109,7 +109,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Built to Spill', timeStart: '3:05pm', timeEnd: '3:55pm', day: 'SAT', stage: 'TOWERS OF GOLD'},
     {favorite: false, name: 'Social Distortion', timeStart: '4:45pm', timeEnd: '5:45pm', day: 'SAT', stage: 'TOWERS OF GOLD'},
     {favorite: false, name: 'Carlene Carter', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'ROOSTER'},
-    {favorite: false, name: 'Buddy Millers Cavalcade of Stars', timeStart: '11:45am', timeEnd: '12:00pm', day: 'SAT', stage: 'ROOSTER'},
+    {favorite: false, name: 'Buddy Miller\'s Cavalcade of Stars', timeStart: '11:45am', timeEnd: '12:00pm', day: 'SAT', stage: 'ROOSTER'},
     {favorite: false, name: 'Kate York', timeStart: '12:15pm', timeEnd: '12:45pm', day: 'SAT', stage: 'ROOSTER'},
     {favorite: false, name: 'Striking Matches', timeStart: '1:00pm', timeEnd: '1:30pm', day: 'SAT', stage: 'ROOSTER'},
     {favorite: false, name: 'Nikki Lane', timeStart: '1:40pm', timeEnd: '2:10pm', day: 'SAT', stage: 'ROOSTER'},
@@ -123,22 +123,23 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'St. Paul & The Broken Bones', timeStart: '2:30pm', timeEnd: '3:20pm', day: 'SAT', stage: 'ARROW'},
     {favorite: false, name: 'Jon Batiste & Stay Human', timeStart: '3:50pm', timeEnd: '4:30pm', day: 'SAT', stage: 'ARROW'},
     {favorite: false, name: 'Reckless Kelly', timeStart: '4:55pm', timeEnd: '5:45pm', day: 'SAT', stage: 'ARROW'},
-    {favorite: false, name: 'The Flatlanders', timeStart: '6:15pm', timeEnd: '7:00pm', day: 'SAT', stage: 'ARROW'},
+    {favorite: false, name: 'The Flatlanders ft. Joe Ely, Jimmie Dale Gilmour & Butch Hancock', timeStart: '6:15pm', timeEnd: '7:00pm', day: 'SAT', stage: 'ARROW'},
     {favorite: false, name: 'The Mastersons', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'PORCH'},
-    {favorite: false, name: 'Roses Pawn Shop', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SAT', stage: 'PORCH'},
+    {favorite: false, name: 'Rose\'s Pawn Shop', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'The Felice Brothers', timeStart: '1:25pm', timeEnd: '2:10pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'Parker Millsap', timeStart: '2:40pm', timeEnd: '3:30pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'Jessica Hernandez & The Deltas', timeStart: '3:50pm', timeEnd: '4:35pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'Chris Smither', timeStart: '4:50pm', timeEnd: '5:35pm', day: 'SAT', stage: 'PORCH'},
-    {favorite: false, name: 'Sister SpARROW & The Dirty Birds', timeStart: '6:05pm', timeEnd: '6:50pm', day: 'SAT', stage: 'PORCH'},
+    {favorite: false, name: 'Sister Sparrow & The Dirty Birds', timeStart: '6:05pm', timeEnd: '6:50pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'Malawi Mouse Boys', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'BANJO'},
-    {favorite: false, name: 'Hot Rize feat. Red Knuckles & The Trailblazers', timeStart: '12:05pm', timeEnd: '12:55pm', day: 'SUN', stage: 'BANJO'},
+    {favorite: false, name: 'Hot Rize ft. Red Knuckles & The Trailblazers', timeStart: '12:05pm', timeEnd: '12:55pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Jerry Douglas Presents Earls of Leicester', timeStart: '1:25pm', timeEnd: '2:15pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Ralph Stanley & The Clinch Mountain Boys', timeStart: '2:45pm', timeEnd: '3:55pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Tweedy', timeStart: '4:05pm', timeEnd: '5:15pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Emmylou Harris', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Alison Browne', timeStart: '11:40am', timeEnd: '12:10pm', day: 'SUN', stage: 'BANDWAGON'},
     {favorite: false, name: 'JB Nimble', timeStart: '2:15pm', timeEnd: '2:30pm', day: 'SUN', stage: 'BANDWAGON'},
+    {favorite: false, name: 'Frank and Sam', timeStart: '5:10pm', timeEnd: '5:45pm', day: 'SUN', stage: 'BANDWAGON'},
     {favorite: false, name: 'Robbie Fulks', timeStart: '11:45am', timeEnd: '12:30pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'The Lone Bellow', timeStart: '1:15pm', timeEnd: '2:00pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'Rosanne Cash', timeStart: '2:50pm', timeEnd: '3:40pm', day: 'SUN', stage: 'STAR'},
@@ -152,7 +153,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'The Go To Hell Man Clan', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'Kevin Welch, Kieran Kane & Fats Kaplan', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'Sun Kil Moon', timeStart: '1:25pm', timeEnd: '2:15pm', day: 'SUN', stage: 'ROOSTER'},
-    {favorite: false, name: 'Chuck Prophet & The Mission Express', timeStart: '2:45pm', timeEnd: '3:30pm', day: 'SUN', stage: 'ROOSTER'},
+    {favorite: false, name: 'Chuck Prophet & The Mission Express "Strings in the Temple"', timeStart: '2:45pm', timeEnd: '3:30pm', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'T Bone Burnett', timeStart: '4:00pm', timeEnd: '5:00pm', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'Jason Isbell', timeStart: '5:30pm', timeEnd: '6:45pm', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'The Sam Chase', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'ARROW'},
@@ -160,7 +161,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Moonalice', timeStart: '1:25pm', timeEnd: '2:15pm', day: 'SUN', stage: 'ARROW'},
     {favorite: false, name: 'Blackie & The Rodeo Kings', timeStart: '2:45pm', timeEnd: '3:40pm', day: 'SUN', stage: 'ARROW'},
     {favorite: false, name: 'Lukas Nelson & Promise of The Real', timeStart: '4:10pm', timeEnd: '5:10pm', day: 'SUN', stage: 'ARROW'},
-    {favorite: false, name: 'Joe Russos Almost Dead', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'SUN', stage: 'ARROW'},
+    {favorite: false, name: 'Joe Russo\'s Almost Dead', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'SUN', stage: 'ARROW'},
     {favorite: false, name: 'Jesse DeNatale', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'PORCH'},
     {favorite: false, name: 'Chuck Cannon', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SUN', stage: 'PORCH'},
     {favorite: false, name: 'The High Bar Gang', timeStart: '1:25pm', timeEnd: '2:10pm', day: 'SUN', stage: 'PORCH'},
@@ -173,10 +174,12 @@ angular.module('HardStrict.controllers', [])
   $scope.favorites = [];
 
   $scope.getItemHeight = function (item) {
-    if (item.name.length > 17) {
-      return 100;
-    } else if (item.name.length > 35) {
-      return 140;
+    var iLength = item.name.length
+    if (iLength > 17) {
+      console.log('found');
+      return 130;
+    // } else if (iLength > 30) {
+    //   return 140;
     } else {
       return 73;
     }

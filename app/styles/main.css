@@ -59,12 +59,12 @@ p,
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: 300px;
-
 }
 
 
-.artist-name {
-  font-size: 16px;
+
+.item .artist-name {
+  font-size: 18px;
 }
 
 
@@ -110,6 +110,12 @@ p,
   color: black;
 }
 
+.col-20 img {
+  width: 30px;
+  padding-left: 8px;
+  display: block;
+}
+
 .col-70 {
   text-align: center;
 }
@@ -142,3 +148,12 @@ p,
   margin-top: 23px;
 }
 
+.stage {
+  letter-spacing: 2px;
+  color: black;
+}
+.times {
+  letter-spacing: 2px;
+  color: #3B3A31;
+  font-style: italic;
+}
