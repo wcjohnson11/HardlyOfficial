@@ -160,7 +160,7 @@ button {
   /*padding-right: 70px;*/
   color: black;
   font-weight: 900;
-  text-shadow: 3px 3px moccassin;
+  text-shadow: 3px 3px gray;
   font-size:29px;
   text-align: center;
 }
@@ -171,6 +171,7 @@ button {
   height: 130px;
   padding-left: 20px;
   text-align: center;
+  text-shadow: 2px 2px gray;
 }
 
 .sort-button-stage {
@@ -179,6 +180,7 @@ button {
   height: 130px;
   padding-left: 20px;
   text-align: center;
+  text-shadow: 2px 2px gray;
 }
 
 .sort-button-fav {
@@ -186,6 +188,7 @@ button {
   width: 200px;
   height: 130px;
   padding-left: 20px;
+  text-shadow: 2px 2px gray;
 }
 
 .button-clear.button-clear {
