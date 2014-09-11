@@ -166,15 +166,6 @@ button {
 }
 
 .sort-button-az {
-  margin-top: 15px;
-  width: 200px;
-  height: 130px;
-  padding-left: 20px;
-  text-align: center;
-  text-shadow: 2px 2px gray;
-}
-
-.sort-button-stage {
   margin-top: 20px;
   width: 200px;
   height: 130px;
@@ -183,8 +174,17 @@ button {
   text-shadow: 2px 2px gray;
 }
 
+.sort-button-stage {
+  margin-top: 18px;
+  width: 200px;
+  height: 130px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
 .sort-button-fav {
-  margin-top: 15px;
+  margin-top: 18px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
