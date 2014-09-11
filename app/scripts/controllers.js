@@ -175,11 +175,11 @@ angular.module('HardStrict.controllers', [])
 
   $scope.getItemHeight = function (item) {
     var iLength = item.name.length
-    if (iLength > 17) {
+    if (iLength > 30) {
       console.log('found');
-      return 130;
-    // } else if (iLength > 30) {
-    //   return 140;
+      return 140;
+    } else if (iLength > 17) {
+      return 100;
     } else {
       return 73;
     }
@@ -191,6 +191,10 @@ angular.module('HardStrict.controllers', [])
     } else {
       item.favorite = true;
     }
+  };
+
+  $scope.sortStage = function () {
+
   };
 
 })
