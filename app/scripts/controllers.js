@@ -49,14 +49,25 @@ angular.module('HardStrict.controllers', [])
     $scope.go('app.playlists');
   };
 
+  $scope.sortStage = function () {
+    console.log($scope.showsStage);
+  };
+
   $scope.showPopup = function() {
-    $scope.data = {};
 
     // An elaborate, custom popup
     var myPopup = $ionicPopup.show({
       templateUrl: './../templates/sort.html',
       title: 'Choose how to sort',
       scope: $scope,
+      buttons: [
+        {text: 'hey!',
+         type: 'button-outline sort-button-stage',
+         onTap: $timeout(function(){
+           console.log('ready');
+         }, 1000)
+      }
+    ]
     });
     $timeout(function() {
       myPopup.close(); //close the popup after 9 seconds for some reason
@@ -171,12 +182,9 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Rising Appalachia', timeStart: '6:20pm', timeEnd: '7:00pm', day: 'SUN', stage: 'PORCH'}
   ];
 
-  $scope.favorites = [];
-
   $scope.getItemHeight = function (item) {
     var iLength = item.name.length
     if (iLength > 30) {
-      console.log('found');
       return 140;
     } else if (iLength > 17) {
       return 100;
@@ -191,10 +199,6 @@ angular.module('HardStrict.controllers', [])
     } else {
       item.favorite = true;
     }
-  };
-
-  $scope.sortStage = function () {
-
   };
 
 })
