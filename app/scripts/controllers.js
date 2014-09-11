@@ -348,10 +348,10 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'T Bone Burnett', timeStart: '4:00pm', timeEnd: '5:00pm', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'Thao & The Get Down Stay Down', timeStart: '1:30pm', timeEnd: '2:15pm', day: 'FRI', stage: 'STAR'},
     {favorite: false, name: 'The Apache Relay', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'TOWERS OF GOLD'},
+    {favorite: false, name: 'The Felice Brothers', timeStart: '1:25pm', timeEnd: '2:10pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'The Flatlanders ft. Joe Ely, Jimmie Dale Gilmour & Butch Hancock', timeStart: '6:15pm', timeEnd: '7:00pm', day: 'SAT', stage: 'ARROW'},
     {favorite: false, name: 'The Go To Hell Man Clan', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'The Good Life', timeStart: '1:00pm', timeEnd: '1:40pm', day: 'FRI', stage: 'ROOSTER'},
-    {favorite: false, name: 'The Felice Brothers', timeStart: '1:25pm', timeEnd: '2:10pm', day: 'SAT', stage: 'PORCH'},
     {favorite: false, name: 'The High Bar Gang', timeStart: '1:25pm', timeEnd: '2:10pm', day: 'SUN', stage: 'PORCH'},
     {favorite: false, name: 'The Lone Bellow', timeStart: '1:15pm', timeEnd: '2:00pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'The Mastersons', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'PORCH'},
@@ -387,11 +387,7 @@ angular.module('HardStrict.controllers', [])
   };
  
   $scope.sortName = function () {
-    var sorted = $scope.showsStage;
-    sorted.sort(function(a,b) {
-      return b.name - a.name;
-    });
-    console.log(sorted);
+    var sorted = $scope.showsAZ;
     $scope.showsStage = sorted;
   };
 
@@ -401,12 +397,21 @@ angular.module('HardStrict.controllers', [])
 
   $scope.sortFav = function () {
     var sorted = $scope.showsStage;
+    var sorted2 = $scope.showsAZ;
+    var favSorted;
     sorted = sorted.filter(function(a) {
       if (a.favorite) {
         return a;
       }
     });
-    $scope.showsStage = sorted;
+    sorted2 = sorted2.filter(function(a) {
+      if (a.favorite) {
+        return a;
+      }
+    });
+    favSorted = sorted.concat(sorted2);
+
+    $scope.showsStage = favSorted;
     $ionicScrollDelegate.scrollTop(true);
   };
 
@@ -420,8 +425,8 @@ angular.module('HardStrict.controllers', [])
       scope: $scope
     });
     $timeout(function() {
-      myPopup.close(); //close the popup after 3 seconds
-    }, 3000);
+      myPopup.close(); //close the popup after 2.5 seconds
+    }, 2500);
    };
 
 })
