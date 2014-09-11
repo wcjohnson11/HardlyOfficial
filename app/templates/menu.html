@@ -1,6 +1,20 @@
 <ion-side-menus>
 
   <ion-pane ion-side-menu-content>
+<!--     <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar> -->
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
+
+  <ion-side-menu side="right">
+    <ion-content>
+      <img class="sorted" ng-src="images/sort.png"/>
+        <div class="col">
+          <button class="button button-clear sort-button-az" ng-click="triggerSortAZ()"></button>
+          <button class="button button-clear sort-button-stage" ng-click="triggerSortStage()"></button>
+          <button class="button button-clear sort-button-fav" ng-click="triggerSortFav()"></button>
+        </div>
+    </ion-content>
+  </ion-side-menu>
 </ion-side-menus>

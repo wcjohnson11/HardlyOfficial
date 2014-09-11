@@ -108,7 +108,7 @@ angular.module('HardStrict.controllers', [])
 
 })
 
-.controller('AppCtrl', function($scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, $ionicPopup, ScheduleService) {
+.controller('AppCtrl', function($rootScope, $scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, $ionicPopup, ScheduleService) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -156,10 +156,22 @@ angular.module('HardStrict.controllers', [])
     $scope.go('app.playlists');
   };
 
+  $scope.triggerSortAZ = function($scope) {
+    $rootScope.$broadcast('sortAZ', $scope);
+  };
+
+  $scope.triggerSortStage = function($scope) {
+    $rootScope.$broadcast('sortStage', $scope);
+  };
+
+  $scope.triggerSortFav = function($scope) {
+    $rootScope.$broadcast('sortFav', $scope);
+  };
+
 
 })
 
-.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService) {
+.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService, $ionicModal) {
   
   $scope.showsStage = [
     {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
@@ -368,7 +380,7 @@ angular.module('HardStrict.controllers', [])
   ];
 
   $scope.getItemHeight = function (item) {
-    var iLength = item.name.length
+    var iLength = item.name.length;
     if (iLength > 30) {
       return 140;
     } else if (iLength > 17) {
@@ -385,6 +397,7 @@ angular.module('HardStrict.controllers', [])
       item.favorite = true;
     }
   };
+  
  
   $scope.sortName = function () {
     var sorted = $scope.showsAZ;
@@ -414,20 +427,31 @@ angular.module('HardStrict.controllers', [])
     $scope.showsStage = favSorted;
     $ionicScrollDelegate.scrollTop(true);
   };
+  $scope.$on('sortAZ', function(event, args) {
+    $scope.sortName();
+  });
+
+  $scope.$on('sortStage', function(event, args) {
+    $scope.sortStage();
+  });
+
+  $scope.$on('sortFav', function(event, args) {
+    $scope.sortFave();
+  });
 
 
+  // Doesn't work in Cordova :(
+  // $scope.showPopup = function() {
 
-  $scope.showPopup = function() {
-
-    var myPopup = $ionicPopup.show({
-      templateUrl: './../templates/sort.html',
-      title: 'Choose how to sort',
-      scope: $scope
-    });
-    $timeout(function() {
-      myPopup.close(); //close the popup after 2.5 seconds
-    }, 2500);
-   };
+  //   var myPopup = $ionicPopup.show({
+  //     templateUrl: './../templates/sort.html',
+  //     title: 'Choose how to sort',
+  //     scope: $scope
+  //   });
+  //   $timeout(function() {
+  //     myPopup.close(); //close the popup after 2.5 seconds
+  //   }, 2500);
+  //  };
 
 })
 
