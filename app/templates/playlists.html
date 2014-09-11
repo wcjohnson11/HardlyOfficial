@@ -12,25 +12,24 @@
     </div>
     <div class="row">
       <div class="col"></div>
-        <div class="col col-90 center bindIt">
+        <div class="col col-90 bindIt">
           <ion-scroll direction="y" class="schedule">
             <ion-item class="item-icon-right item-text-wrap" collection-repeat="playlist in showsStage"
             collection-item-width="'100%'"
-            collection-item-height="74">
+            collection-item-height="getItemHeight(playlist)">
               <div class="row">
-                <div class="col ">
+                <div class="col col-20" ng-click="toggleFave(playlist)">
                   <img ng-if="!playlist.favorite" ng-src="./../images/STAR.png">
                   <img ng-if="playlist.favorite" ng-src="./../images/STARFULL.png">
                 </div>
-                <div class="col"></div>
-                <div class="col"></div>
-              </div>
-              <h2 class="artist-name">{{playlist.name}}</h2>
-              <p><span class="day">{{playlist.day}}</span></p>
-              <p><span class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</span></p>
-              <p><span class="stage">{{playlist.stage}}</span></p>
-              <div class="divider">
-                <img style="width: 100%"ng-src="./../images/divider.png"/>
+                <div class="col col-70">
+                  <h2 class="artist-name">{{playlist.name}}</h2>
+                  <p><span class="stage">{{playlist.stage}}</span></p>
+                  <p><span class="times">{{playlist.timeStart}} - {{playlist.timeEnd}}</span></p>
+                </div>
+                <div class="col col-10">
+                  <p><span class="day">{{playlist.day}}</span></p>
+                </div>
               </div>
             </ion-item>
           </ion-scroll>

@@ -49,37 +49,28 @@ p,
 .item-icon-right {
   background-color: transparent;
   width: 100%;
+  height: auto;
   word-wrap: break-word;
   white-space: nowrap;
   display: inline-block;
+  padding: 0px;
+  position: relative;
+  background-image: url(./../images/divider.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 300px;
+
 }
 
-
-.times {
-  float: right;
-}
-
-.day {
-  float: left;
-}
 
 .artist-name {
   font-size: 16px;
 }
 
-.stage {
-  float: right;
-  /*margin-left: 50px;*/
-}
-
-p {
- display: inline-block;
-}
 
 .divider {
-  width: 240px;
-  position: absolute;
-  float: left;
+  position: relative;
+  width: 100%;
 }
 
 
@@ -107,6 +98,30 @@ p {
   right: 23px;
   opacity: 0.1;
 }
+
+
+.day {
+  -webkit-transform: rotate(90deg);
+  display: block;
+  float: left;
+  line-height:4em;
+  font-size: 16px;
+  font-style: bold;
+  color: black;
+}
+
+.col-70 {
+  text-align: center;
+}
+
+.col-10 {
+  text-align: center;
+}
+
+.col-20 {
+  padding-left: 5px;
+}
+
 
 .popup .row {
   padding: 0px;
