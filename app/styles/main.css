@@ -90,7 +90,8 @@ div.bindIt {
 
 h2.question {
   font-size: 25px;
-  padding-top: 15px;
+  padding-top: 7px;
+  margin-bottom: -5px;
   color: #E8C400;
   font-weight: 900;
   text-shadow: 1px 1px #655636;
