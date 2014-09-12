@@ -83,8 +83,8 @@ button {
 }
 
 .pleaseWork {
-  background: url(./../images/Splash.jpg)no-repeat left top fixed;
-  padding-right: 45px;
+  background: url(./../images/SortBy.jpg)no-repeat center center fixed;
+  background-size: 100% 100%;
 }
 
 .item-complex {
@@ -154,19 +154,9 @@ button {
   padding: 0px;
 }
 
-.headly {
-  margin-top: 30px;
-  padding-top: 30px;
-  /*padding-right: 70px;*/
-  color: black;
-  font-weight: 900;
-  text-shadow: 3px 3px gray;
-  font-size:29px;
-  text-align: center;
-}
 
 .sort-button-az {
-  margin-top: 20px;
+  margin-top: 120px;
   width: 200px;
   height: 130px;
   padding-left: 20px;
