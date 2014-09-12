@@ -8,10 +8,10 @@ angular.module('HardStrict.controllers', [])
     {question: 'Camping?', subA: false, answer: 'Sorry, there is no camping allowed in Golden Gate Park. There is a campground in The Presidio - Rob Hill Campground:', link: 'http://www.presidio.gov/explore/Pages/rob-hill-campground.aspx'},
     {question: 'Parking?', subA: false, answer: 'If you park on the street, please respect the neighborhood and DO NOT block driveaways! Parking in the neighborhoods surrounding Golden Gate Park is EXTREMELY limited. We highly encourage taking public transport, biking or walking instead of driving. It is very important that we all respect the neighbors around the park - do NOT block driveways, clean up after yourselves, and keep noise levels down. Remember that people live here and do not use yards as toilets or trash cans.', link: false},
     {question: 'Paid Parking', subA: 'Paid parking will be available on a first come first serve basis at a few lots that include: ', answer: 'George Washington High School - 600 32nd Ave. [enter at 30th Ave. between Geary & Anza] \n Argonne 680 18th Ave. [enter at Cabrillo between 17th Ave. and 18th Ave.] \n Lafayette (Sat & Sun ONLY) - 4545 Anza Street @ 36th Avenue [enter on 36th between Anza and Balboa] \n Presidio Middle School (Sat & Sun ONLY) - 450 30th Ave. [enter on 29th Ave. between Geary and Clement] \n Jefferson Elementary School (Sat & Sun ONLY) - 1725 Irving St. [Enter on 18th Ave. between Irving and Judah]', link: false},
-    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'JFK drive closed between Transverse and Spreckels Lake turnaround', link: false},
-    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'JFK drive closed between Stowe Lake Circle & 36th Ave \n 30th Ave closed from Fulton to JFK Drive', link: false},
-    {question: false, subA: 'Thursday 10/2 : 10pm - Monday 10/7 : 1pm', answer: 'Polo Fields parking area on both north (stables) and south side of Polo Fields', link: false},
-    {question: false, subA: 'Thursday 10/2 : 10pm - Sunday 10/5 : 11:55pm', answer: 'JFK Drive closed from 36th Ave to Chain of Lakes Drive \n 36th Ave from Fulton to turnaround \n Transverse Drive from Crossover (25th Ave) to MLK Drive \n Overlook Drive from Transverse to Middle Drive West \n Middle Drive West from Transverse to MLK \n Metson Drive from Middle Drive West to MLK', link: false},
+    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm - JFK drive closed between Transverse and Spreckels Lake turnaround', link: false},
+    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm - JFK drive closed between Stowe Lake Circle & 36th Ave \n 30th Ave closed from Fulton to JFK Drive', link: false},
+    {question: false, subA: 'Thursday 10/2 : 10pm - Monday 10/7 : 1pm', answer: 'Thursday 10/2 : 10pm - Monday 10/7 : 1pm - Polo Fields parking area on both north (stables) and south side of Polo Fields', link: false},
+    {question: false, subA: 'Thursday 10/2 : 10pm - Sunday 10/5 : 11:55pm', answer: 'Thursday 10/2 : 10pm - Sunday 10/5 : 11:55pm - JFK Drive closed from 36th Ave to Chain of Lakes Drive \n 36th Ave from Fulton to turnaround \n Transverse Drive from Crossover (25th Ave) to MLK Drive \n Overlook Drive from Transverse to Middle Drive West \n Middle Drive West from Transverse to MLK \n Metson Drive from Middle Drive West to MLK', link: false},
     {question: 'What are we allowed to bring?', subA: false, answer: 'Coolers, blankets, and short-back chairs are all allowed. Cameras are ok (no tripods or intrusive equipment please). There will also be vendors on-site selling food and non-alcoholic beverages. No alcohol will be for sale in the park, however, alcohol is allowed as per park rules: no hard alcohol or glass is allowed; beer and wine in non-glass containers ONLY. Any hard alcohol brought to the festival will be confiscated by SFPD and violators may be subject to fine. PLEASE respect the park and pick up and take everything with you that you bring in. There will be a sweep of the park by waste management each evening (which means no saving spaces for the following day).', link: false},
     {question: 'Will there be food available?', subA: false, answer: 'Yes, there will be over 50 purveyors of food and drink featuring the best festival food the Bay Area has to offer. We do not have a complete list of all vendors, but there will be a very wide variety of food.  Patrons are welcome to bring their own picnics. Alcohol will not be sold. Trash and recycling containers are located throughout the Grove. Be a good neighbor and dispose of your trash!', link: false},
     {question: 'Is smoking allowed?', subA: false, answer: 'A City-wide ordinance (Health Code Section 1009.81) went into effect in 2005, prohibiting smoking in all public parks. Smoking is not allowed in any area in Golden Gate Park.', link: false},
@@ -165,7 +165,7 @@ angular.module('HardStrict.controllers', [])
     $scope.modal.show();
   },
 
-  // Create the login modal that we will use later
+  // Create the faq modal that we will use later
   $ionicModal.fromTemplateUrl('templates/faq.html', {
     scope: $scope
   }).then(function(modal) {
@@ -173,7 +173,7 @@ angular.module('HardStrict.controllers', [])
   }),
 
 
-  // Triggered in the login modal to close it
+  // Triggered in the faq modal to close it
   $scope.closeFaq = function() {
     $scope.modal2.hide();
   },
@@ -182,26 +182,9 @@ angular.module('HardStrict.controllers', [])
     showList: false
   },
 
-  $scope.faqList = FAQService;
+  $scope.faqList = FAQService,
 
-  $scope.getFaqHeight = function (item) {
-    var iLength = item.answer.length;
-    if (iLength > 400) {
-      console.log(item.answer.length);
-      return 800;
-    } else if (iLength > 300) {
-      console.log(item.answer);
-      return 600;
-    } else if (iLength > 200) {
-      return 300;
-    } else if (iLength > 50) {
-      return 200;
-    } else {
-      return 73;
-    }
-  },
-
-  // Open the login modal
+  // Open the faq modal
   $scope.faq = function() {
     $scope.modal2.show();
     $timeout(function() {
@@ -209,21 +192,17 @@ angular.module('HardStrict.controllers', [])
     }, 500);
   },
 
-  $scope.startApp = function() {
-    $state.go('app.playlists');
-  },
-
   $scope.sortShow = function() {
     $scope.go('app.playlists');
-  };
+  },
 
   $scope.triggerSortAZ = function($scope) {
     $rootScope.$broadcast('sortAZ', $scope);
-  };
+  },
 
   $scope.triggerSortStage = function($scope) {
     $rootScope.$broadcast('sortStage', $scope);
-  };
+  },
 
   $scope.triggerSortFav = function($scope) {
     $rootScope.$broadcast('sortFav', $scope);
