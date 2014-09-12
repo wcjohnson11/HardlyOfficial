@@ -5,12 +5,15 @@
     <ion-content>
       <div class="list" ng-if="showList">
       	<div class="bindIt">
+      	<ion-scroll direction="y" class="faq">
       	<div ng-repeat='playlist in faqList'
-      	class="item-icon-right item-text-wrap">
+      	class="item-icon-faq item-text-wrap">
       	    <h2 class="question" ng-if="playlist.question">{{playlist.question}}</h2>
+      	    <img class="faqGuides" ng-if="playlist.question" src="images/divider.png"/> -->
       	    <p><span class="subA" ng-if="playlist.subA">{{playlist.subA}}</span><span class="answer"> - {{playlist.answer}}</span></p>
       	    <!-- <p><span class="stage">{{playlist.stage}}</span></p> -->
       	</div>
+      </ion-scroll>
       </div>
       </div>
   </ion-content>

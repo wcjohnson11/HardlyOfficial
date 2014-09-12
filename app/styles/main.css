@@ -13,7 +13,8 @@ h2,
 p,
 .item,
 .item-complex,
-button {
+button,
+.item-icon-faq {
   font-family: 'CheltBolCon';
 }
 
@@ -63,35 +64,68 @@ button {
   background-size: 300px;
 }
 
+.item-icon-faq {
+  background: transparent;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0px;
+  position: relative;
+}
+
+
+
 div.bindIt {
   height: 100%;
 }
 
 .item .artist-name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 900;
   text-shadow: 1px 1px #655636;
 }
 
 h2.question {
-  font-size: 30px;
-  color: #D8C6A8;
+  font-size: 25px;
+  padding-top: 15px;
+  color: #E8C400;
   font-weight: 900;
   text-shadow: 1px 1px #655636;
+  background-image: url(./../images/divider.png);
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
+  background-size: 320px;
+  font-family: CheltBolCon;
+}
+
+.faq {
+  width: 320px;
+  height: 470px;
+}
+
+.faqGuides {
+  width: 320px;
 }
 
 span.subA {
-  font-size: 25px;
-  color: white;
+  font-size: 20px;
+  color: #F4E5E5;
   font-weight: 900;
   text-shadow: 1px 1px #655636;
+  font-family: CheltBolCon;
 }
 
 span.answer {
   font-size: 18px;
-  color: gray;
+  padding-top: 10px;
+  color: #E2E5E5;
   font-weight: 900;
   text-shadow: 1px 1px #655636;
+  font-family: CheltBolCon;
+
 }
 
 
