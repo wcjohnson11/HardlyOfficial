@@ -171,7 +171,7 @@ angular.module('HardStrict.controllers', [])
 
 })
 
-.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService, $ionicModal) {
+.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService) {
   
   $scope.showsStage = [
     {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
@@ -429,7 +429,16 @@ angular.module('HardStrict.controllers', [])
       if (favSorted.length) {
         sortedList = favSorted;
       } else {
-        sortedList = [{name: 'Star some artists to make your own custom lineup! \n It\'s the easiest way to stay on top of all this great music!', stage:'The Hardly Strictly Family'}];
+        sortedList = [{favorite: false, name: 'Star some artists to make your own custom lineup,\n it\'s the easiest way to stay on top of all this great music!', timeStart:'------', timeEnd:'------', stage:'Try sorting by Band Name or Stage Name'}];
+        $timeout(function(){
+          $scope.showsStage[0].favorite = true;
+        }, 800);
+        $timeout(function(){
+          $scope.showsStage[0].favorite = false;
+        }, 1300);
+        $timeout(function(){
+          $scope.showsStage[0].favorite = true;
+        }, 1800);
       }
     };
     makeSortedList();
