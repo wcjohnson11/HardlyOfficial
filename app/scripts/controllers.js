@@ -1,6 +1,42 @@
 'use strict';
 angular.module('HardStrict.controllers', [])
 
+.factory('FAQService', function() {
+  var faq = [
+    {question: 'When is it?', subA: 'When:', answer: 'Fri Oct 3rd (Noon - 7pm, plus kids program 10:30am - Noon), Sat Oct 4th (11am - 7pm), and Sun Oct 5th, 2014 (11am - 7pm).', link: false},
+    {question: 'Where is it?', subA: 'Where:', answer: 'Hellman Hollow (formerly Speedway Meadows), Lindley & Marx meadows in Golden Gate Park, San Francisco, CA. Click on the map button on the home page for a map.', link: false},
+    {question: 'Camping?', subA: false, answer: 'Sorry, there is no camping allowed in Golden Gate Park. There is a campground in The Presidio - Rob Hill Campground:', link: 'http://www.presidio.gov/explore/Pages/rob-hill-campground.aspx'},
+    {question: 'Parking?', subA: false, answer: 'If you park on the street, please respect the neighborhood and DO NOT block driveaways! Parking in the neighborhoods surrounding Golden Gate Park is EXTREMELY limited. We highly encourage taking public transport, biking or walking instead of driving. It is very important that we all respect the neighbors around the park - do NOT block driveways, clean up after yourselves, and keep noise levels down. Remember that people live here and do not use yards as toilets or trash cans.', link: false},
+    {question: 'Paid Parking', subA: 'Paid parking will be available on a first come first serve basis at a few lots that include: ', answer: 'George Washington High School - 600 32nd Ave. [enter at 30th Ave. between Geary & Anza] \n Argonne 680 18th Ave. [enter at Cabrillo between 17th Ave. and 18th Ave.] \n Lafayette (Sat & Sun ONLY) - 4545 Anza Street @ 36th Avenue [enter on 36th between Anza and Balboa] \n Presidio Middle School (Sat & Sun ONLY) - 450 30th Ave. [enter on 29th Ave. between Geary and Clement] \n Jefferson Elementary School (Sat & Sun ONLY) - 1725 Irving St. [Enter on 18th Ave. between Irving and Judah]', link: false},
+    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'JFK drive closed between Transverse and Spreckels Lake turnaround', link: false},
+    {question: false, subA: 'Thursday 10/2 : 8pm - Monday 10/6 : 6pm', answer: 'JFK drive closed between Stowe Lake Circle & 36th Ave \n 30th Ave closed from Fulton to JFK Drive', link: false},
+    {question: false, subA: 'Thursday 10/2 : 10pm - Monday 10/7 : 1pm', answer: 'Polo Fields parking area on both north (stables) and south side of Polo Fields', link: false},
+    {question: false, subA: 'Thursday 10/2 : 10pm - Sunday 10/5 : 11:55pm', answer: 'JFK Drive closed from 36th Ave to Chain of Lakes Drive \n 36th Ave from Fulton to turnaround \n Transverse Drive from Crossover (25th Ave) to MLK Drive \n Overlook Drive from Transverse to Middle Drive West \n Middle Drive West from Transverse to MLK \n Metson Drive from Middle Drive West to MLK', link: false},
+    {question: 'What are we allowed to bring?', subA: false, answer: 'Coolers, blankets, and short-back chairs are all allowed. Cameras are ok (no tripods or intrusive equipment please). There will also be vendors on-site selling food and non-alcoholic beverages. No alcohol will be for sale in the park, however, alcohol is allowed as per park rules: no hard alcohol or glass is allowed; beer and wine in non-glass containers ONLY. Any hard alcohol brought to the festival will be confiscated by SFPD and violators may be subject to fine. PLEASE respect the park and pick up and take everything with you that you bring in. There will be a sweep of the park by waste management each evening (which means no saving spaces for the following day).', link: false},
+    {question: 'Will there be food available?', subA: false, answer: 'Yes, there will be over 50 purveyors of food and drink featuring the best festival food the Bay Area has to offer. We do not have a complete list of all vendors, but there will be a very wide variety of food.  Patrons are welcome to bring their own picnics. Alcohol will not be sold. Trash and recycling containers are located throughout the Grove. Be a good neighbor and dispose of your trash!', link: false},
+    {question: 'Is smoking allowed?', subA: false, answer: 'A City-wide ordinance (Health Code Section 1009.81) went into effect in 2005, prohibiting smoking in all public parks. Smoking is not allowed in any area in Golden Gate Park.', link: false},
+    {question: 'Dogs?', subA: false, answer: 'Dogs are allowed as per park rules (on leash, etc.) Dogs should be comfortable with large crowds and loud music. Please clean up after your dogs!', link: false},
+    {question: 'Children?', subA: false, answer: 'The festival is family-friendly. Make sure you have the appropriate earplugs for very young children. There will be large crowds and loud music, so be prepared for that.', link: false},
+    {question: 'Hotels in area?', subA: false, answer: 'Please call the Chamber of Commerce, use a travel site such as Orbitz or Yahoo Travel, or contact the San Francisco Convention & Visitors Bureau for assistance. Visitors can request assistance from the Visitor Information Center - 415-391-2000 (tollfree at 888-782-9673 (STAY-N-SF)).', link: false},
+    {question: 'Transportation around the park? ', subA: false, answer: 'This year we expect the park service to run their shuttle service.', link: false},
+    {question: 'Getting to the Hardly Strictly Bluegrass Concert by Public Transit?', subA: false, answer: 'Extra MUNI service will run from 10 AM to 8 PM on Friday, Saturday and Sunday. \n On the north side of the Park , people going to HSB should look for the buses with the 5L on the signage as this will be a limited stop bus and will be a much faster trip out to the Park. \n The SFMTA will be running the 5L which will leave from McAllister and Larkin (outside of the Civic Center BART/MUNI Station) where it will drop off passengers at 30th & Fulton \n Returning, people can pick up the 5L on Fulton between 25th and 30th Avenues and be dropped off at Hyde & Fulton, just a short block away from the Civic Center Station \n On the south side of the Park, the SFMTA will be running extra N Judah LRV service which will go from Caltrain at King & Second Streets to the end of the line at the Beach and return. \n Regular fares will be charged. ', link: false},
+    {question: 'Will bike parking be available?', subA: false, answer: 'es, we have both self bike parking and valet bike parking. Please review this year\'s map for locations.', link: false},
+    {question: 'What time are we allowed in?', subA: false, answer: '10AM entry to the meadows.', link: false},
+    {question: 'Restroom facilities?', subA: false, answer: 'There will be port-a-potties on site.', link: false},
+    {question: 'Free Water', subA: false, answer: 'Free water will be available at the drinking fountain near the Rock Med tent (between Banjo and Arrow stages).', link: false},
+    {question: 'Medical Attention (Nearest Hospital)', subA: false, answer: 'The nearest hospital is Health Connection St Mary\'s Hospital & Medical Center at 450 Stanyan St, San Francisco, CA - (415) 750-5785', link: false},
+    {question: 'Will compost and Recycling be available?', subA: false, answer: 'Yes compost and recycling is both available and we encourage you to use to help us move closer to being a Zero waste event. Please also remember to pack out what you bring in!', link: false},
+    {question: 'Disabled accessibility?', subA: false, answer: 'Yes, there will be a special section reserved at each stage. Disabled persons can be dropped off at JFK and Transverse. Shuttle Service: Round-trip, wheelchair accessible shuttle service is provided beginning at 10:30AM on Saturday and Sunday. The shuttle stops are located along JFK Drive at each stage location. The shuttle begins at JFK and Transverse Avenue.', link: false},
+    {question: 'Disabled Parking?', subA: false, answer: 'A limited number of handicapped permit parking spaces will be available along Transverse Avenue between JFK Drive and MLK Dr. There is no other designated parking area. First Come First Serve.', link: false},
+    {question: 'Festival Etiquette!', subA: false, answer: 'You may bring blankets and low chairs. Blanket/ground cover size is limited to 8 x 10 feet due to space restrictions. Blankets and ground covers left unoccupied for more than an hour will be subject to removal. \n Please respect the people around you by keeping your talking volume reasonable so that everyone can hear the music.\n Unauthorized sales, solicitation, and distribution are prohibited.\n Please respect our neighbors in the Richmond and Sunset districts - don\'t block driveways, don\'t litter, don\'t use front or backyards as bathrooms, etc. The happiness of our neighbors is VITAL to the continued success of HSB!\n Please do not sell alcohol, drugs, or any sort of wares - only HSB-approved vendors will be allowed.\n Only officially scheduled performers will be allowed, please no busking.\n Please pack out anything you bring in to the park. Recycling and composting will be available - please make sure to use these services.\n Please do not lock bikes to trees or fences. Valet and self bike parking will be available - see the bike map.', link: false},
+    {question: 'Merchandise', subA: false, answer: 'We will be selling T-shirts and CDs of most artists. There are merch booths at the Banjo, Arrow, Star, Towers of Gold, and Rooster Stages. Official HSB Merch will be sold at the Banjo Stage Merch Tent.', link: false},
+    {question: 'Lost & Found', subA: false, answer: 'Lost and found is located at all three Info booths (see map)', link: false},
+    {question: 'Press inquiries?', subA: false, answer: 'We do not issue press passes. Photography is fine, but no professional video shooting is allowed due to artist request.', link: false},
+    {question: 'What else do I need to know?', subA: false, answer: 'Aisles and walkways must be kept clear at all times.\n Dress comfortable and remember to be prepared for sun or fog!\nPlease be aware of personal items. The Festival cannot assume responsibility for lost or stolen items.', link: false}
+  ];
+  return faq;
+})
+
 .factory('ScheduleService', function() {
   var schedule = [
     {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
@@ -108,17 +144,16 @@ angular.module('HardStrict.controllers', [])
 
 })
 
-.controller('AppCtrl', function($rootScope, $scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, $ionicPopup, ScheduleService) {
+.controller('AppCtrl', function($rootScope, $scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, FAQService) {
   // Form data for the login modal
-  $scope.loginData = {};
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
-  });
-
+  }),
+  
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -128,14 +163,14 @@ angular.module('HardStrict.controllers', [])
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
-  };
+  },
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/faq.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal2 = modal;
-  });
+  }),
 
 
   // Triggered in the login modal to close it
@@ -143,14 +178,40 @@ angular.module('HardStrict.controllers', [])
     $scope.modal2.hide();
   },
 
+  $scope.data = {
+    showList: false
+  },
+
+  $scope.faqList = FAQService;
+
+  $scope.getFaqHeight = function (item) {
+    var iLength = item.answer.length;
+    if (iLength > 400) {
+      console.log(item.answer.length);
+      return 800;
+    } else if (iLength > 300) {
+      console.log(item.answer);
+      return 600;
+    } else if (iLength > 200) {
+      return 300;
+    } else if (iLength > 50) {
+      return 200;
+    } else {
+      return 73;
+    }
+  },
+
   // Open the login modal
   $scope.faq = function() {
     $scope.modal2.show();
+    $timeout(function() {
+      $scope.showList = true;
+    }, 500);
   },
 
   $scope.startApp = function() {
     $state.go('app.playlists');
-  };
+  },
 
   $scope.sortShow = function() {
     $scope.go('app.playlists');
@@ -169,6 +230,10 @@ angular.module('HardStrict.controllers', [])
   };
 
 
+})
+
+.controller('ModalCtrl', function($scope) {
+  $scope.newUser = {};
 })
 
 .controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService) {
@@ -429,7 +494,7 @@ angular.module('HardStrict.controllers', [])
       if (favSorted.length) {
         sortedList = favSorted;
       } else {
-        sortedList = [{favorite: false, name: 'Star some artists to make your own custom lineup,\n it\'s the easiest way to stay on top of all this great music!', timeStart:'------', timeEnd:'------', stage:'Try sorting by Band Name or Stage Name'}];
+        sortedList = [{favorite: false, name: 'Star some artists to make your own custom lineup,\n it\'s the easiest way to stay on top of all this great music!', timeStart:'', timeEnd:'', stage:'Try sorting by Band Name or Stage Name'}];
         $timeout(function(){
           $scope.showsStage[0].favorite = true;
         }, 800);

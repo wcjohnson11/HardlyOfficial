@@ -1,75 +1,30 @@
-<div class="modal" style="padding-top: 20px; width: 3592px; height: 2112px; background: url('images/FAQ.png')no-repeat center center fixed; background-size:100% 100%">
+<div class="modal" style="padding-top: 20px; background: url('images/FAQ.png')no-repeat center center fixed; background-size:100% 100%" ng-controller="ModalCtrl">
   <div class="handClose">
-    <img ng-src="images/HAND.png" style="width: 60%; height: 70%" ng-click="closeFaq()"/>
+    <img ng-src="images/HAND.png" style="width: 100%; height: 100%" ng-click="closeFaq()"/>
   </div>
-  <ion-scroll>
-  <ion-list>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-     <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-    <ion-item>
-    <p>'hey'</p>
-    </ion-item>
-  </ion-list>
-</ion-scroll>
+    <ion-content>
+      <div class="list" ng-if="showList">
+      	<div class="bindIt">
+      	<div ng-repeat='playlist in faqList'
+      	class="item-icon-right item-text-wrap">
+      	    <h2 class="question" ng-if="playlist.question">{{playlist.question}}</h2>
+      	    <p><span class="subA" ng-if="playlist.subA">{{playlist.subA}}</span><span class="answer"> - {{playlist.answer}}</span></p>
+      	    <!-- <p><span class="stage">{{playlist.stage}}</span></p> -->
+      	</div>
+      </div>
+      </div>
+  </ion-content>
 </div>
+
+
+
+<!-- 
+
+
+<ion-item>
+      <p><span class="Q"></span></p>
+      <h2 class="subSub"><span class="subHead">When?</span></h2>
+</ion-item> 
+
+
+-->
