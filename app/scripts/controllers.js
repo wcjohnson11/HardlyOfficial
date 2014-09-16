@@ -144,6 +144,14 @@ angular.module('HardStrict.controllers', [])
 
 })
 
+.run(function($ionicPlatform, $timeout) {
+    $ionicPlatform.ready(function() {
+        $timeout(function() {
+            navigator.splashscreen.hide();
+        }, 100);
+    });
+})
+
 .controller('AppCtrl', function($rootScope, $scope, $ionicScrollDelegate, $ionicModal, $timeout, $state, FAQService) {
   // Form data for the login modal
 
