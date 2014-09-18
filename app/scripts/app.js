@@ -8,7 +8,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('HardStrict', ['ionic', 'config', 'HardStrict.controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $timeout) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,6 +18,10 @@ angular.module('HardStrict', ['ionic', 'config', 'HardStrict.controllers'])
     if(window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.hide();
+
+      $timeout(function() {
+        navigator.splashscreen.hide();
+      }, 100);
     }
   });
 })
