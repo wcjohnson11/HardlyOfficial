@@ -35,6 +35,32 @@ button,
   .schedule {
     height: 333px;
   }
+
+  .sort-button-az {
+  margin-top: 75px;
+  width: 200px;
+  height: 150px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
+.sort-button-stage {
+  margin-top: 28px;
+  width: 200px;
+  height: 170px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
+.sort-button-fav {
+  margin-top: 20px;
+  width: 200px;
+  height: 170px;
+  padding-left: 20px;
+  text-shadow: 2px 2px gray;
+}
 }
 
 /*CSS for iPhone 5*/
@@ -46,6 +72,32 @@ button,
 	.schedule {
 	  height: 390px;
 	}
+
+  .sort-button-az {
+  margin-top: 100px;
+  width: 200px;
+  height: 150px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
+.sort-button-stage {
+  margin-top: 28px;
+  width: 200px;
+  height: 170px;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
+.sort-button-fav {
+  margin-top: 35px;
+  width: 200px;
+  height: 170px;
+  padding-left: 20px;
+  text-shadow: 2px 2px gray;
+}
 }
 
 
@@ -245,32 +297,6 @@ div.list {
   opacity: 0.9;
 }*/
 
-
-.sort-button-az {
-  margin-top: 100px;
-  width: 200px;
-  height: 130px;
-  padding-left: 20px;
-  text-align: center;
-  text-shadow: 2px 2px gray;
-}
-
-.sort-button-stage {
-  margin-top: 18px;
-  width: 200px;
-  height: 130px;
-  padding-left: 20px;
-  text-align: center;
-  text-shadow: 2px 2px gray;
-}
-
-.sort-button-fav {
-  margin-top: 18px;
-  width: 200px;
-  height: 130px;
-  padding-left: 20px;
-  text-shadow: 2px 2px gray;
-}
 
 .button-clear.button-clear {
   color: #3B3A31;
