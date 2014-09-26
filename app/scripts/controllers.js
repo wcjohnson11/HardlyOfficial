@@ -215,7 +215,7 @@ angular.module('HardStrict.controllers', [])
   $scope.newUser = {};
 })
 
-.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService, $cordovaFile) {
+.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService) {
   
   $scope.showsStage = [
     {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
@@ -498,9 +498,9 @@ angular.module('HardStrict.controllers', [])
     $scope.sortStage();
   });
 
-  $scope.$on('sortFav', function(event, args) {
-    $scope.sortFav();
-  });
+  // $scope.$on('sortFav', function(event, args) {
+  //   $scope.sortFav();
+  // });
 
 
   // Doesn't work in Cordova :(
