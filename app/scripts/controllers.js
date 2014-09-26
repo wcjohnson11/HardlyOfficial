@@ -44,7 +44,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'John Prine', timeStart: '2:40pm', timeEnd: '3:40pm', day: 'FRI', stage: 'BANJO'},
     {favorite: false, name: 'Dry Branch Fire Squad', timeStart: '4:15pm', timeEnd: '5:15pm', day: 'FRI', stage: 'BANJO'},
     {favorite: false, name: 'Ryan Adams', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'FRI', stage: 'BANJO'},
-    {favorite: false, name: 'PMW', timeStart: '10:30am', timeEnd: '11:00am', day: 'FRI', stage: 'STAR'},
+    {favorite: false, name: 'Poor Man\'s Whiskey', timeStart: '10:30am', timeEnd: '11:00am', day: 'FRI', stage: 'STAR'},
     {favorite: false, name: 'The Aquabats', timeStart: '11:30am', timeEnd: '12:00pm', day: 'FRI', stage: 'STAR'},
     {favorite: false, name: 'Thao & The Get Down Stay Down', timeStart: '1:30pm', timeEnd: '2:15pm', day: 'FRI', stage: 'STAR'},
     {favorite: false, name: 'Dave Alvin & Phil Alvin with the Guilty Ones', timeStart: '2:45pm', timeEnd: '3:45pm', day: 'FRI', stage: 'STAR'},
@@ -60,7 +60,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Hurray For The Riff Raff', timeStart: '2:35pm', timeEnd: '3:25pm', day: 'FRI', stage: 'ARROW'},
     {favorite: false, name: 'Cibo Matto and Nels Cline', timeStart: '4:00pm', timeEnd: '5:10pm', day: 'FRI', stage: 'ARROW'},
     {favorite: false, name: 'Yo La Tengo', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'FRI', stage: 'ARROW'},
-    {favorite: false, name: 'The McCrary Sisters', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'BANJO'},
+    {favorite: false, name: 'McCrary Sisters', timeStart: '11:00am', timeEnd: '11:40am', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Alison Brown Quintet', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'The Time Jumpers', timeStart: '1:25pm', timeEnd: '2:15pm', day: 'SAT', stage: 'BANJO'},
     {favorite: false, name: 'Holler Down The Hollow: A Hardly Strictly Salute to the Masters', timeStart: '2:45pm', timeEnd: '3:55pm', day: 'SAT', stage: 'BANJO'},
@@ -109,7 +109,7 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Emmylou Harris', timeStart: '5:45pm', timeEnd: '7:00pm', day: 'SUN', stage: 'BANJO'},
     {favorite: false, name: 'Jimmie Dale Gilmore', timeStart: '11:40am', timeEnd: '12:10pm', day: 'SUN', stage: 'BANDWAGON'},
     {favorite: false, name: 'JB Nimble', timeStart: '2:15pm', timeEnd: '2:30pm', day: 'SUN', stage: 'BANDWAGON'},
-    {favorite: false, name: 'Frank and Sam', timeStart: '5:10pm', timeEnd: '5:45pm', day: 'SUN', stage: 'BANDWAGON'},
+    {favorite: false, name: 'The Brothers Gibb', timeStart: '5:10pm', timeEnd: '5:45pm', day: 'SUN', stage: 'BANDWAGON'},
     {favorite: false, name: 'Robbie Fulks', timeStart: '11:45am', timeEnd: '12:30pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'The Lone Bellow', timeStart: '1:15pm', timeEnd: '2:00pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'Rosanne Cash', timeStart: '2:50pm', timeEnd: '3:40pm', day: 'SUN', stage: 'STAR'},
@@ -117,8 +117,8 @@ angular.module('HardStrict.controllers', [])
     {favorite: false, name: 'Bruce Cockburn', timeStart: '6:10pm', timeEnd: '7:00pm', day: 'SUN', stage: 'STAR'},
     {favorite: false, name: 'The Apache Relay', timeStart: '11:00am', timeEnd: '11:45am', day: 'SUN', stage: 'TOWERS OF GOLD'},
     {favorite: false, name: 'Laurie Lewis & The Right Hands', timeStart: '12:30pm', timeEnd: '1:15pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
-    {favorite: false, name: 'Bonnie "Prince" Billy & The Cairo Gang Feat. Dawn McCarthy', timeStart: '2:00pm', timeEnd: '2:50pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
-    {favorite: false, name: 'Bela Fleck & Abigail Washburn', timeStart: '3:40pm', timeEnd: '4:30pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
+    {favorite: false, name: 'Bonnie "Prince" Billy & The Cairo Gang ft. Dawn McCarthy', timeStart: '2:00pm', timeEnd: '2:50pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
+    {favorite: false, name: 'Béla Fleck & Abigail Washburn', timeStart: '3:40pm', timeEnd: '4:30pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
     {favorite: false, name: 'Dwight Yoakam', timeStart: '5:20pm', timeEnd: '6:10pm', day: 'SUN', stage: 'TOWERS OF GOLD'},
     {favorite: false, name: 'The Go To Hell Man Clan', timeStart: '11:00am', timeEnd: '11:40am', day: 'SUN', stage: 'ROOSTER'},
     {favorite: false, name: 'Kevin Welch, Kieran Kane & Fats Kaplin', timeStart: '12:10pm', timeEnd: '12:55pm', day: 'SUN', stage: 'ROOSTER'},
@@ -215,7 +215,7 @@ angular.module('HardStrict.controllers', [])
   $scope.newUser = {};
 })
 
-.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService) {
+.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $ionicScrollDelegate, ScheduleService, $cordovaFile) {
   
   $scope.showsStage = [
     {favorite: false, name: 'Peter Rowan\'s Twang an\' Groove', timeStart: '12:00pm', timeEnd: '12:45pm', day: 'FRI', stage: 'BANJO'},
