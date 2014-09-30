@@ -25,6 +25,20 @@ button,
   position: absolute;
 }
 
+.mapBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.map {
+  width: 2000px;
+  height: 1136px;
+  background-size: cover;
+  position: absolute;
+  background-position: bottom;
+}
+
 
 /*CSS for iPhone 3 & 4*/
 @media screen and (min-device-height: 400px) {
@@ -37,12 +51,12 @@ button,
   }
 
   .sort-button-az {
-  margin-top: 75px;
-  width: 200px;
-  height: 150px;
-  padding-left: 20px;
-  text-align: center;
-  text-shadow: 2px 2px gray;
+    margin-top: 75px;
+    width: 200px;
+    height: 150px;
+    padding-left: 20px;
+    text-align: center;
+    text-shadow: 2px 2px gray;
 }
 
 .sort-button-stage {
