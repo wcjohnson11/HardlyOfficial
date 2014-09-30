@@ -32,8 +32,8 @@ button,
 }
 
 .map {
-  width: 2000px;
-  height: 1136px;
+  width: auto;
+  height: 100%;
   position: relative;
 }
 
